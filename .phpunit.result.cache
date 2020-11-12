@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":290:{a:2:{s:7:"defects";a:2:{s:50:"DepositServiceTest::testAssignValueToAccountNumber";i:3;s:45:"DepositServiceTest::testDepositWithStubMethod";i:6;}s:5:"times";a:2:{s:50:"DepositServiceTest::testAssignValueToAccountNumber";d:0.305;s:45:"DepositServiceTest::testDepositWithStubMethod";d:0.358;}}}
