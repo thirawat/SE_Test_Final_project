@@ -67,9 +67,4 @@ class DepositService
     { 
         return  DBConnection::saveTransaction($accNo, $updatedBalance);
     }
-
-    public function FunctionName() : bool
-    {
-        return $this->saveTransaction('1234567890',1234);
-    }
 }
