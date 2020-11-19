@@ -28,6 +28,9 @@ class DepositService
         elseif(!preg_match('/^[0-9]*$/',$amount)){
             $response["message"] = "Amount must be numeric!";
         }
+        elseif((int)$amount <= 0){
+            $response["message"] = "Amount must be numeric!";
+        }
         else{
             try
             {
@@ -51,7 +54,7 @@ class DepositService
             }
             catch(AccountInformationException $e)
             {
-                $result["message"] = $e->getMessage();
+                $response["message"] = $e->getMessage();
             }            
         }
 
