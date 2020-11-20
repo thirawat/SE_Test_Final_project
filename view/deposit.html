@@ -61,7 +61,7 @@
                         </li>
                         <!-- Logout    -->
                         <li class="nav-item">
-                            <a id="logoutBtn" href="#" class="nav-link logout">ออกจากระบบ
+                            <a id="logoutBtn" href="#" class="nav-link logout" onclick="logout()">ออกจากระบบ
                                 <i class="fa fa-sign-out"></i>
                             </a>
                         </li>
@@ -100,7 +100,7 @@
                                         <label class="col-sm-2 form-control-label">จำนวนเงิน
                                         </label>
                                         <div class="col-sm-6">
-                                            <input id="amount" type="number" min="1" class="form-control form-control-warning" required>
+                                            <input id="amount" type="number" max="100000" min="1" class="form-control form-control-warning" required>
                                             <small class="form-text"></small>
                                         </div>
                                     </div>

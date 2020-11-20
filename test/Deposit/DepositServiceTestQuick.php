@@ -3,9 +3,9 @@
 use PHPUnit\Framework\TestCase;
 use Operation\DepositService;
 
-require_once __DIR__.'./../src/deposit/DepositService.php';
+require_once __DIR__.'./../../src/deposit/DepositService.php';
 
-final class DepositServiceTest extends TestCase {
+final class DepositServiceTestQuick extends TestCase {
     
     /**
     * @dataProvider depositDataProvider
@@ -17,10 +17,10 @@ final class DepositServiceTest extends TestCase {
             ->getMock();
         $stub1 = $mock->method('accountAuthenticationProvider');
         $stub2 = $mock->method('saveTransaction');
-        if($acc_no == '1234567890')
+        if($acc_no == '4312531892')
         {
             $stub1->willReturn([
-                "accNo" => '123456789',
+                "accNo" => '4312531892',
                 "accBalance" => 2000,
                 "accName" => 'Demo',
             ]);
@@ -35,7 +35,7 @@ final class DepositServiceTest extends TestCase {
         $this->assertEquals($error_message, isset($result['message'])?$result['message']:'');
     }
 
-     /**
+    /**
     * @dataProvider depositDataProvider
     */
     function testDepositWith1StubMethod($acc_no,$deposit,$is_error,$error_message) {
@@ -63,13 +63,17 @@ final class DepositServiceTest extends TestCase {
     function depositDataProvider()
     {
         return [
-            ['acc_no'=>'1234567890','deposit'=>'100','is_error'=>false,'error_message'=>''],
-            ['acc_no'=>'q!@We#$Rt%','deposit'=>'100','is_error'=>true,'error_message'=>'Account no. must be numeric!'],
-            ['acc_no'=>'1234','deposit'=>'100','is_error'=>true,'error_message'=>'Account no. must have 10 digit!'],
-            ['acc_no'=>'1234567890','deposit'=>'0','is_error'=>true,'error_message'=>'Amount must be numeric!'],
-            ['acc_no'=>'1234567890','deposit'=>'-100','is_error'=>true,'error_message'=>'Amount must be numeric!'],
-            ['acc_no'=>'1234567890','deposit'=>'q!@We#$rT%','is_error'=>true,'error_message'=>'Amount must be numeric!'],
-            ['acc_no'=>'0987654321','deposit'=>'100','is_error'=>true,'error_message'=>'Account number : 0987654321 not found.'],
+            
+
+            ['acc_no'=>'7666555444','deposit'=>'2500','is_error'=>true,'error_message'=>'Account number : 7666555444 not found.'],
+            ['acc_no'=>'abcdefgash','deposit'=>'3000','is_error'=>true,'error_message'=>'Account no. must be numeric!'],
+            ['acc_no'=>'1234567890','deposit'=>'Twenty','is_error'=>true,'error_message'=>'Amount must be numeric!'],
+            ['acc_no'=>'11248291321','deposit'=>'3000','is_error'=>true,'error_message'=>'Account no. must have 10 digit!'],
+            ['acc_no'=>'198182938','deposit'=>'4444','is_error'=>true,'error_message'=>'Account no. must have 10 digit!'],
+            ['acc_no'=>'1234567890','deposit'=>'0','is_error'=>true,'error_message'=>'จำนวนเงินฝากเข้าระบบต้องมากกว่า 0 บาท'],
+            ['acc_no'=>'0238218583','deposit'=>'100001','is_error'=>true,'error_message'=>'จำนวนเงินฝากเข้าระบบต้องไม่เกิน 100,000 บาทต่อครั้ง'],
+            ['acc_no'=>'4312531892','deposit'=>'15000','is_error'=>false,'error_message'=>''],
+
         ];
-    }
+    }   
 }
