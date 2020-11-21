@@ -17,6 +17,18 @@ CREATE TABLE `ACCOUNT` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO `ACCOUNT` (`no`, `pin`, `name`, `balance`, `waterCharge`, `electricCharge`, `phoneCharge`) VALUES
-('1234567890',	'1234',	'Thirawat Sutalungka',	1128702,	0,	0,	0);
+('1234567890',	'1234',	'Thirawat Sutalungka',	1000000,	0,	0,	0);
+INSERT INTO `ACCOUNT` (`no`, `pin`, `name`, `balance`, `waterCharge`, `electricCharge`, `phoneCharge`) VALUES
+('1234567891',	'1234',	'Phenphitcha Patthanajitsilp',	2000000,	0,	0,	0);
+INSERT INTO `ACCOUNT` (`no`, `pin`, `name`, `balance`, `waterCharge`, `electricCharge`, `phoneCharge`) VALUES
+('1234567892',	'1234',	'Chonnathai Chanthakul',	3000000,	0,	0,	0);
+INSERT INTO `ACCOUNT` (`no`, `pin`, `name`, `balance`, `waterCharge`, `electricCharge`, `phoneCharge`) VALUES
+('1234567893',	'1234',	'Phornhathai thanomwong',	4000000,	0,	0,	0);
+INSERT INTO `ACCOUNT` (`no`, `pin`, `name`, `balance`, `waterCharge`, `electricCharge`, `phoneCharge`) VALUES
+('1234567894',	'1234',	'Pitiwat Arunruviwat',	5000000,	0,	0,	0);
+INSERT INTO `ACCOUNT` (`no`, `pin`, `name`, `balance`, `waterCharge`, `electricCharge`, `phoneCharge`) VALUES
+('1234567895',	'1234',	'Narongsak Yooyen',	6000000,	0,	0,	0);
+INSERT INTO `ACCOUNT` (`no`, `pin`, `name`, `balance`, `waterCharge`, `electricCharge`, `phoneCharge`) VALUES
+('1234567896',	'1234',	'Pakinwet Saksamerprom',	7000000,	0,	0,	0);
 
 -- 2020-11-12 14:40:55
