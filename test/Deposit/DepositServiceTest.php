@@ -12,7 +12,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '2500';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['accountAuthenticationProvider','saveTransaction'])
+            ->setMethods(['accountAuthenticationProvider','saveTransaction'])
             ->getMock();
         $stub1 = $mock->method('accountAuthenticationProvider');
         $stub2 = $mock->method('saveTransaction');
@@ -39,7 +39,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '3000';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['accountAuthenticationProvider','saveTransaction'])
+            ->setMethods(['accountAuthenticationProvider','saveTransaction'])
             ->getMock();
         $stub1 = $mock->method('accountAuthenticationProvider');
         $stub1->willReturn([
@@ -60,7 +60,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = 'Twenty';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['accountAuthenticationProvider','saveTransaction'])
+            ->setMethods(['accountAuthenticationProvider','saveTransaction'])
             ->getMock();
         $stub1 = $mock->method('accountAuthenticationProvider');
         $stub1->willReturn([
@@ -81,7 +81,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '3000';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['accountAuthenticationProvider','saveTransaction'])
+            ->setMethods(['accountAuthenticationProvider','saveTransaction'])
             ->getMock();
         $stub1 = $mock->method('accountAuthenticationProvider');
         $stub1->willReturn([
@@ -102,7 +102,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '3000';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['accountAuthenticationProvider','saveTransaction'])
+            ->setMethods(['accountAuthenticationProvider','saveTransaction'])
             ->getMock();
         $stub1 = $mock->method('accountAuthenticationProvider');
         $stub1->willReturn([
@@ -123,7 +123,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '0';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['accountAuthenticationProvider','saveTransaction'])
+            ->setMethods(['accountAuthenticationProvider','saveTransaction'])
             ->getMock();
         $stub1 = $mock->method('accountAuthenticationProvider');
         $stub1->willReturn([
@@ -144,7 +144,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '100001';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['accountAuthenticationProvider','saveTransaction'])
+            ->setMethods(['accountAuthenticationProvider','saveTransaction'])
             ->getMock();
         $stub1 = $mock->method('accountAuthenticationProvider');
         $stub1->willReturn([
@@ -165,7 +165,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '15000';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['accountAuthenticationProvider','saveTransaction'])
+            ->setMethods(['accountAuthenticationProvider','saveTransaction'])
             ->getMock();
         $stub1 = $mock->method('accountAuthenticationProvider');
         $stub1->willReturn([
@@ -185,7 +185,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '2500';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['saveTransaction'])
+            ->setMethods(['saveTransaction'])
             ->getMock();
     
         $stub2 = $mock->method('saveTransaction');
@@ -200,7 +200,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '3000';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['saveTransaction'])
+            ->setMethods(['saveTransaction'])
             ->getMock();
     
         $stub2 = $mock->method('saveTransaction');
@@ -215,7 +215,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = 'Twenty';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['saveTransaction'])
+            ->setMethods(['saveTransaction'])
             ->getMock();
     
         $stub2 = $mock->method('saveTransaction');
@@ -230,7 +230,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '3000';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['saveTransaction'])
+            ->setMethods(['saveTransaction'])
             ->getMock();
     
         $stub2 = $mock->method('saveTransaction');
@@ -245,7 +245,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '3000';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['saveTransaction'])
+            ->setMethods(['saveTransaction'])
             ->getMock();
     
         $stub2 = $mock->method('saveTransaction');
@@ -260,7 +260,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '0';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['saveTransaction'])
+            ->setMethods(['saveTransaction'])
             ->getMock();
         $stub2 = $mock->method('saveTransaction');
         $stub2->willReturn(true);
@@ -274,7 +274,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '100001';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['saveTransaction'])
+            ->setMethods(['saveTransaction'])
             ->getMock();
     
         $stub2 = $mock->method('saveTransaction');
@@ -289,7 +289,7 @@ final class DepositServiceTest extends TestCase {
         $deposit = '15000';
         $mock = $this->getMockBuilder(DepositService::class)
             ->setConstructorArgs(['acctNum'=>$acc_no])    
-            ->onlyMethods(['saveTransaction'])
+            ->setMethods(['saveTransaction'])
             ->getMock();
     
         $stub2 = $mock->method('saveTransaction');

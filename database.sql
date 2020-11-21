@@ -16,7 +16,4 @@ CREATE TABLE `ACCOUNT` (
   `phoneCharge` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-INSERT INTO `ACCOUNT` (`no`, `pin`, `name`, `balance`, `waterCharge`, `electricCharge`, `phoneCharge`) VALUES
-('1234567890',	'1234',	'Thirawat Sutalungka',	1128702,	0,	0,	0);
-
 -- 2020-11-12 14:40:55
