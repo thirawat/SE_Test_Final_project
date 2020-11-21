@@ -47,8 +47,7 @@ class DepositService
                         "accNo" => $accNo,
                         "accBalance" => $updatedBalance,
                         "accName" => $account['accName'],
-                    );
-                    
+                    );       
                 }
                 else
                 {
