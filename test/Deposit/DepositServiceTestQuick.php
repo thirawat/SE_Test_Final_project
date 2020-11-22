@@ -70,8 +70,8 @@ final class DepositServiceTestQuick extends TestCase {
             ['acc_no'=>'1234567890','deposit'=>'Twenty','is_error'=>true,'error_message'=>'Amount must be numeric!'],
             ['acc_no'=>'11248291321','deposit'=>'3000','is_error'=>true,'error_message'=>'Account no. must have 10 digit!'],
             ['acc_no'=>'198182938','deposit'=>'4444','is_error'=>true,'error_message'=>'Account no. must have 10 digit!'],
-            ['acc_no'=>'1234567890','deposit'=>'0','is_error'=>true,'error_message'=>'จำนวนเงินฝากเข้าระบบต้องมากกว่า 0 บาท'],
-            ['acc_no'=>'0238218583','deposit'=>'100001','is_error'=>true,'error_message'=>'จำนวนเงินฝากเข้าระบบต้องไม่เกิน 100,000 บาทต่อครั้ง'],
+            ['acc_no'=>'1234567890','deposit'=>'0','is_error'=>true,'error_message'=>'The amount of deposit must be greater than 0 bath'],
+            ['acc_no'=>'0238218583','deposit'=>'100001','is_error'=>true,'error_message'=>'The amount of deposit must not exceed 100,000 per transaction'],
             ['acc_no'=>'4312531892','deposit'=>'15000','is_error'=>false,'error_message'=>''],
 
         ];
