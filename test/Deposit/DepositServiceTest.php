@@ -136,7 +136,7 @@ final class DepositServiceTest extends TestCase {
         $stub2->willReturn(true);
         $result = $mock->deposit($deposit);
         $this->assertEquals(true, $result['isError']);
-        $this->assertEquals('จำนวนเงินฝากเข้าระบบต้องมากกว่า 0 บาท', $result['message']);
+        $this->assertEquals('The amount of deposit must be greater than 0 bath', $result['message']);
     }
 
     function testDeposit100001BahtWith2ServiceAuthenticationAndSaveTransactionStub() {
@@ -157,7 +157,7 @@ final class DepositServiceTest extends TestCase {
         $stub2->willReturn(true);
         $result = $mock->deposit($deposit);
         $this->assertEquals(true, $result['isError']);
-        $this->assertEquals('จำนวนเงินฝากเข้าระบบต้องไม่เกิน 100,000 บาทต่อครั้ง', $result['message']);
+        $this->assertEquals('The amount of deposit must not exceed 100,000 per transaction', $result['message']);
     }
     
     function testDepositCompleteWith2ServiceAuthenticationAndSaveTransactionStub() {
@@ -266,7 +266,7 @@ final class DepositServiceTest extends TestCase {
         $stub2->willReturn(true);
         $result = $mock->deposit($deposit);
         $this->assertEquals(true, $result['isError']);
-        $this->assertEquals('จำนวนเงินฝากเข้าระบบต้องมากกว่า 0 บาท', $result['message']);
+        $this->assertEquals('The amount of deposit must be greater than 0 bath', $result['message']);
     }
     
     function testDeposit100001BahtWithSaveTransactionStub() {
@@ -281,7 +281,7 @@ final class DepositServiceTest extends TestCase {
         $stub2->willReturn(true);
         $result = $mock->deposit($deposit);
         $this->assertEquals(true, $result['isError']);
-        $this->assertEquals('จำนวนเงินฝากเข้าระบบต้องไม่เกิน 100,000 บาทต่อครั้ง', $result['message']);
+        $this->assertEquals('The amount of deposit must not exceed 100,000 per transaction', $result['message']);
     }
     
     function testDepositCompleteWithSaveTransactionStub() {
@@ -349,7 +349,7 @@ final class DepositServiceTest extends TestCase {
         $depositObj =  new DepositService($acc_no);
         $result = $depositObj->deposit($deposit);
         $this->assertEquals(true, $result['isError']);
-        $this->assertEquals('จำนวนเงินฝากเข้าระบบต้องมากกว่า 0 บาท', $result['message']);
+        $this->assertEquals('The amount of deposit must be greater than 0 bath', $result['message']);
     }
     
     function testDeposit100001BahtWithRealService() {
@@ -358,7 +358,7 @@ final class DepositServiceTest extends TestCase {
         $depositObj =  new DepositService($acc_no);
         $result = $depositObj->deposit($deposit);
         $this->assertEquals(true, $result['isError']);
-        $this->assertEquals('จำนวนเงินฝากเข้าระบบต้องไม่เกิน 100,000 บาทต่อครั้ง', $result['message']);
+        $this->assertEquals('The amount of deposit must not exceed 100,000 per transaction', $result['message']);
     }
     
     function testDepositCompleteWithRealService() {

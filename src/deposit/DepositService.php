@@ -29,10 +29,10 @@ class DepositService
             $response["message"] = "Amount must be numeric!";
         }
         elseif((int)$amount <= 0){
-            $response["message"] = "จำนวนเงินฝากเข้าระบบต้องมากกว่า 0 บาท";
+            $response["message"] = "The amount of deposit must be greater than 0 bath";
         }
         elseif((int)$amount > 100000){
-            $response["message"] = "จำนวนเงินฝากเข้าระบบต้องไม่เกิน 100,000 บาทต่อครั้ง";
+            $response["message"] = "The amount of deposit must not exceed 100,000 per transaction";
         }
         else{
             try
